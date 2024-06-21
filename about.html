@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Deslizante</title>
+    <title>Sobre - Menu Deslizante</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -70,52 +71,62 @@
         }
         .info-box {
             position: absolute;
-            top: 140px;
-            left: 780px;
+            top: 180px;
+            left: 630px;
             background-color: rgba(1, 11, 20, 0.8);
             color: white;
             padding: 20px;
-            width: 350px;
+            height: 450px;
+            width: 700px;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             z-index: 10;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
             font-family: 'Poppins', sans-serif;
         }
-        .info-box h1, .info-box p {
-            margin: 0;
+        .profile-img {
+            position: absolute;
+            top: -50px;
+            left: 20px;
+            width: 250px;
+            height: 250px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
         }
-        .service-item {
-            text-align: center;
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .text-container {
+            margin-left: 280px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
         }
-        .imagem-destacada {
-            background-color: rgba(255, 255, 255, 0.2); /* Fundo branco transparente */
-            border-radius: 10px; /* Bordas arredondadas */
-            padding: 10px; /* Espaço entre a imagem e a borda do fundo */
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para mais destaque */
-            margin-bottom: 10px; /* Espaço após a imagem */
+        .contact-info {
+            margin-left: -80px;
+            margin-right: 190px;
+            width: 120%;
+            margin-top: 50px;
         }
-        .hire-button {
-            position: absolute;
-            bottom: 140px;
-            left: 830px;
+        .contact-info h2 {
+            margin: 10px 0;
             font-size: 20px;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
         }
-        .hire-button:hover {
-            transform: scale(1.1);
+        .contact-info p, .social-icons a {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .social-icons a {
+            margin-right: 10px;
+        }
+        .social-icons i {
+            font-size: 24px;
         }
     </style>
 </head>
@@ -125,40 +136,25 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="services.html">Serviços</a>
         <a href="about.html">Sobre</a>
-
     </div>
     <div class="info-box">
-        <h1>Bem-vindo à JL Soluções!</h1>
-        <p>A JL Soluções é uma empresa de soluções em tecnologias fictícia criada para um trabalho de IDW.</p>
-    </div>
-    <div class="info-box" style="top: 360px; width: 800px; left: 550px;">
-        <h1>Conheça nossos serviços:</h1>
-        <div style="display: flex; justify-content: space-around; width: 100%;">
-            <div class="service-item">
-                <div class="imagem-destacada">
-                    <img src="assets/publicacao.png" alt="Publicação" style="width: 100px; height: auto;">
+        <div class="profile-img">
+            <img src="assets/team.jpeg" alt="Profile Image">
+        </div>
+        <div class="text-container">
+            <h1>Olá, Esta é nossa equipe!</h1>
+            <p>Na JL Soluções, temos orgulho de contar com uma equipe que não só representa o melhor do profissionalismo, mas também da inovação e da criatividade.</p>
+            <div class="contact-info">
+                <h2>Precisa nos contatar?</h2>
+                <p>Tel: (69) 420-420</p>
+                <p>Email: contato@jlsolucoes.com.br</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/xxxxxxxxx"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/jlsolucoes"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/jlsolucoes"><i class="fab fa-facebook-f"></i></a>
                 </div>
-                <h3>Publicação</h3>
-                <p>Descrição do serviço de publicação, ajudando você a alcançar um público maior.</p>
-            </div>
-            <div class="service-item">
-                <div class="imagem-destacada">
-                    <img src="assets/ideia.png" alt="Ideia" style="width: 100px; height: auto;">
-                </div>
-                <h3>Idealização</h3>
-                <p>Transformamos suas ideias em projetos concretos e executáveis.</p>
-            </div>
-            <div class="service-item">
-                <div class="imagem-destacada">
-                    <img src="assets/desenvolvimento.png" alt="Desenvolvimento" style="width: 100px; height: auto;">
-                </div>
-                <h3>Desenvolvimento</h3>
-                <p>Desenvolvemos soluções personalizadas para atender às suas necessidades empresariais.</p>
             </div>
         </div>
-    </div>
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="services.html" class="hire-button">Contrate Nossos Serviços</a>
     </div>
     <button class="menu-btn" onclick="openNav()">☰ Menu</button>
 
